@@ -8,7 +8,6 @@ const HeroSection = () => {
   const { data } = useContext(WeatherData);
   const image = data?.current?.condition?.icon;
 
-  console.log(data?.current);
   return (
     <section className="w-full flex flex-col items-center">
       <h1 className="text-white font-bold">{data?.location?.name}</h1>

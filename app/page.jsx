@@ -5,6 +5,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ThisWeek from "@/components/ThisWeek";
+import InfoDay from "@/components/InfoDay";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-between p-2 gap-5">
         <Header />
         <HeroSection />
+        <InfoDay />
         <ThisWeek />
       </main>
     </WeatherData.Provider>
