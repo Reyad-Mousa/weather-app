@@ -45,7 +45,7 @@ const ThisWeek = () => {
               </li>
               <div className="flex flex-col gap-5  justify-between items-center h-fit">
                 <li className="font-bold">{dayName}</li>
-                <li className="font-bold text-2xl">{item.day.avgtemp_c}°C</li>
+                <li className="font-bold text-2xl">{item.day.avgtemp_c}°c</li>
                 <span className="text-[0.8rem]">{item.day.condition.text}</span>
               </div>
               <div>
