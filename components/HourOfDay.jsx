@@ -7,15 +7,15 @@ const HourOfDay = () => {
 
   console.log(InfoDayData);
   return (
-    <section className="w-full flex flex-col items-center justify-evenly text-white">
+    <section className="w-full flex flex-col items-start justify-evenly text-white p-4 ">
       <h1 className="text-white text-2xl font-bold mb-4 ">Hour</h1>
-      <div className="flex flex-row overflow-auto w-full ">
+      <div className="flex flex-row overflow-auto w-full pb-5 px-5">
         {InfoDayData?.map((item, index) => (
           <ul
             key={index}
-            className="flex flex-col items-center p-2 sm:flex-row"
+            className="gird mx-2 py-2 px-4  sm:flex-row bg-white/10 shadow-sm rounded-lg"
           >
-            <li className="sm:text-lg text-sm pt-2">
+            <li className="sm:text-lg text-sm ">
               {new Date(item.time).toLocaleTimeString([], {
                 hour: "2-digit",
                 hour12: true,
