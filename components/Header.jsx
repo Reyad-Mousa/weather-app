@@ -16,7 +16,7 @@ const Header = () => {
       api_key +
       "&q=" +
       searchTerm +
-      "&days=5&aqi=no&alerts=no";
+      "&days=6&aqi=no&alerts=no";
     try {
       const response = await axios.get(api_url);
       setData(response.data);
