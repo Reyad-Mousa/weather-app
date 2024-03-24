@@ -1,6 +1,4 @@
-"use client";
-import { FC, useContext } from "react";
-import { Sun } from "lucide-react";
+import { useContext } from "react";
 import { WeatherData } from "@/context/location";
 import Image from "next/image";
 
@@ -16,7 +14,7 @@ const HeroSection = () => {
         {image && (
           <div className="flex flex-col items-center ">
             <Image
-              src={`https:${data?.current?.condition?.icon}`}
+              src={`https:${image}`}
               alt=""
               width={150}
               height={200}
