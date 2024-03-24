@@ -47,7 +47,7 @@ const Header = () => {
             setSearchTerm(e.target.value);
           }}
         />
-        <CircleX className=" cursor-pointer " />
+        <CircleX className=" cursor-pointer " onClick={() => setLocation("")} />
       </div>
       <Settings className=" cursor-pointer w-fit h-fit py-2 p-2 bg-white/20 text-white rounded-full" />
     </header>
