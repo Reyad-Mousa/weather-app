@@ -7,7 +7,7 @@ const InfoDay = () => {
   const sunrise = InfoDayData?.astro?.sunrise;
   const sunset = InfoDayData?.astro?.sunset;
   const chance_rain = InfoDayData?.day?.daily_chance_of_rain;
-  const windy_speed = InfoDayData?.day?.maxwind_kph;
+  const windy_speed = InfoDayData?.day?.avgvis_km;
   const uv_index = InfoDayData?.day?.uv;
 
   return (
