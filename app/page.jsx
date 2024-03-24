@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ThisWeek from "@/components/ThisWeek";
 import InfoDay from "@/components/InfoDay";
+import HourOfDay from "@/components/HourOfDay";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -20,6 +21,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <InfoDay />
+        <HourOfDay />
         <ThisWeek />
       </main>
     </WeatherData.Provider>
