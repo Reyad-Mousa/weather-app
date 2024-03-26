@@ -31,7 +31,7 @@ const ThisWeek = () => {
           return (
             <ul
               key={index}
-              className="bg-white/10 shadow-sm max-w-72  py-2 grid grid-cols-3  items-center gap-3 rounded-lg text-white"
+              className="bg-white/5 shadow-sm max-w-72  py-2 grid grid-cols-3  items-center gap-3 rounded-lg text-white"
             >
               <li className="">
                 <Image
