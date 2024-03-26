@@ -14,6 +14,7 @@ const HeroSection = () => {
         {image && (
           <div className="flex flex-col items-center ">
             <Image
+              className="hidden md:block "
               src={`https:${image}`}
               alt=""
               width={150}
