@@ -21,7 +21,7 @@ const Header = () => {
       const response = await axios.get(api_url);
       setData(response.data);
     } catch (error) {
-      console.error("Failed to fetch weather data: ", error);
+      window.alert("error in server ", error);
     }
     setLoading(false);
   };
