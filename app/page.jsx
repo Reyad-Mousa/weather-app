@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { WeatherData } from "../context/location";
 import { useState } from "react";
 import Header from "@/components/Header";
@@ -7,11 +6,12 @@ import HeroSection from "@/components/HeroSection";
 import ThisWeek from "@/components/ThisWeek";
 import InfoDay from "@/components/InfoDay";
 import HourOfDay from "@/components/HourOfDay";
+import Loading from "./loading";
 
 export default function Home() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState("cairo");
-  const [loading, setLoading] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   return (
     <WeatherData.Provider
@@ -19,10 +19,16 @@ export default function Home() {
     >
       <main className="flex flex-col items-center justify-between p-2 gap-5">
         <Header />
-        <HeroSection />
-        <InfoDay />
-        <HourOfDay />
-        <ThisWeek />
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <HeroSection />
+            <InfoDay />
+            <HourOfDay />
+            <ThisWeek />
+          </>
+        )}
       </main>
     </WeatherData.Provider>
   );
