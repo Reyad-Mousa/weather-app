@@ -13,7 +13,7 @@ const HourOfDay = () => {
         {InfoDayData?.map((item, index) => (
           <ul
             key={index}
-            className="flex flex-col justify-between items-center content-center mx-1 text-center  p-2 bg-white/10 shadow-sm rounded-lg"
+            className="flex flex-col justify-between items-center content-center mx-1 text-center  p-2 bg-white/5 shadow-sm rounded-lg"
           >
             <li className="sm:text-lg text-sm ">
               {new Date(item.time).toLocaleTimeString([], {
