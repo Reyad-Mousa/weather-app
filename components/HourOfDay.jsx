@@ -5,7 +5,6 @@ const HourOfDay = () => {
   const { data } = useContext(WeatherData);
   const InfoDayData = data?.forecast?.forecastday[0]?.hour;
 
-  console.log(data);
   return (
     <section className="w-full flex flex-col items-start justify-evenly text-white p-4 ">
       <h1 className="text-white text-2xl font-bold mb-4 ">Hour</h1>
