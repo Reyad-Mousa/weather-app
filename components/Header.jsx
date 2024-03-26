@@ -5,10 +5,11 @@ import React, { useContext, useEffect, useState } from "react";
 
 const Header = () => {
   const { setData } = useContext(WeatherData);
+  const { loading, setLoading } = useContext(WeatherData);
   const { location, setLocation } = useContext(WeatherData);
   const [searchTerm, setSearchTerm] = useState(location);
-
   const getWeather = async () => {
+    setLoading(true);
     const api_key = "c365698461fe4ad884c191834242003";
     const api_url =
       "https://api.weatherapi.com/v1/forecast.json?key=" +
@@ -22,6 +23,7 @@ const Header = () => {
     } catch (error) {
       console.error("Failed to fetch weather data: ", error);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
