@@ -2,7 +2,6 @@ import { WeatherData } from "@/context/location";
 import axios from "axios";
 import { CircleX, Search, Settings } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
-import Image from "next/image";
 
 const Header = () => {
   const { setData } = useContext(WeatherData);
