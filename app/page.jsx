@@ -10,9 +10,7 @@ import Loading from "./loading";
 
 export default function Home() {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState(
-    () => localStorage.getItem("location") || "cairo"
-  );
+  const [location, setLocation] = useState("cairo");
   const [loading, setLoading] = useState(true);
 
   return (

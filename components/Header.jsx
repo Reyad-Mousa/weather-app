@@ -1,15 +1,16 @@
 import { Theme } from "@/context/darkThemeContext";
 import { WeatherData } from "@/context/location";
 import axios from "axios";
-import { CircleX, Search, Settings, Sun, Moon } from "lucide-react";
+import { CircleX, Search, Sun, Moon } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
 
 const Header = () => {
   const { mode, toggle } = useContext(Theme);
   const { setData } = useContext(WeatherData);
-  const { loading, setLoading } = useContext(WeatherData);
+  const { setLoading } = useContext(WeatherData);
   const { location, setLocation } = useContext(WeatherData);
   const [searchTerm, setSearchTerm] = useState(location);
+  
   const getWeather = async () => {
     setLoading(true);
     const api_key = "c365698461fe4ad884c191834242003";
@@ -32,10 +33,6 @@ const Header = () => {
     const timeoutId = setTimeout(getWeather, 500); // Debounce the search
     return () => clearTimeout(timeoutId, 2000); // Clear the timeout
   }, [searchTerm]);
-
-  useEffect(() => {
-    localStorage.setItem("location", location); // Save location to localStorage
-  }, [location]);
 
   return (
     <header className=" py-2 p-4 flex flex-row items-center justify-between gap-3 w-full">
