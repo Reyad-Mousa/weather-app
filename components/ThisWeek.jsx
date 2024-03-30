@@ -24,14 +24,14 @@ const ThisWeek = () => {
 
   return (
     <section className="p-4 flex flex-col items-start w-full">
-      <h1 className="text-white text-2xl font-bold mb-4 ">This Week</h1>
+      <h1 className="dark:text-white text-2xl font-bold mb-4 ">This Week</h1>
       <div className="flex flex-wrap gap-5 justify-center">
         {ThisWeek?.forecastday?.map((item, index) => {
           const dayName = getDayName(item.date);
           return (
             <ul
               key={index}
-              className="bg-white/5 shadow-sm max-w-72  py-2 grid grid-cols-3  items-center gap-3 rounded-lg text-white"
+              className="bg-white/5 shadow-md max-w-72  py-2 grid grid-cols-3  items-center gap-3 rounded-lg dark:text-white"
             >
               <li className="">
                 <Image

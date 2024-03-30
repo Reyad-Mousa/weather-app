@@ -12,7 +12,7 @@ const InfoDay = () => {
   const humidity = InfoDayData?.day?.avghumidity;
 
   return (
-    <section className="px-10 grid grid-cols-2 w-full sm:flex sm:flex-row  gap-8 items-center justify-evenly text-white">
+    <section className="px-10 grid grid-cols-2 w-full sm:flex sm:flex-row  gap-8 items-center justify-evenly dark:text-white">
       <div className="flex flex-col items-center sm:flex-row">
         <Image src="/rain.png" alt="rain" width={50} height={50} />
         <ul className="p-2 text-center">

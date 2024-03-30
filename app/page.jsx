@@ -10,14 +10,16 @@ import Loading from "./loading";
 
 export default function Home() {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState("cairo");
+  const [location, setLocation] = useState(
+    () => localStorage.getItem("location") || "cairo"
+  );
   const [loading, setLoading] = useState(true);
 
   return (
     <WeatherData.Provider
       value={{ data, loading, location, setData, setLoading, setLocation }}
     >
-      <main className="flex flex-col items-center justify-between p-2 gap-5">
+      <main className="flex flex-col items-center justify-between p-2 gap-5 dark:bg-black">
         <Header />
         {loading ? (
           <Loading />

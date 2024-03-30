@@ -20,7 +20,7 @@ const Loading = () => {
         />
       </svg>
       <span className="sr-only text-rose-600">Loading...</span>
-      <span className="text-white">Loading...</span>
+      <span className="dark:text-white">Loading...</span>
     </div>
   );
 };

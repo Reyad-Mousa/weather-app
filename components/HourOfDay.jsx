@@ -6,13 +6,13 @@ const HourOfDay = () => {
   const InfoDayData = data?.forecast?.forecastday[0]?.hour;
 
   return (
-    <section className="w-full flex flex-col items-start justify-evenly text-white p-4 ">
-      <h1 className="text-white text-2xl font-bold mb-4 ">Hour</h1>
+    <section className="w-full flex flex-col items-start justify-evenly dark:text-white p-4 ">
+      <h1 className="dark:text-white text-2xl font-bold mb-4 ">Hour</h1>
       <div className="flex flex-row overflow-auto w-full pb-5 pl-2 sm:px-5">
         {InfoDayData?.map((item, index) => (
           <ul
             key={index}
-            className="flex flex-col justify-between items-center content-center mx-1 text-center  p-2 bg-white/5 shadow-sm rounded-lg"
+            className="flex flex-col justify-between items-center content-center mx-1 text-center  p-2 bg-white/5 shadow-lg rounded-lg"
           >
             <li className="sm:text-lg text-sm ">
               {new Date(item.time).toLocaleTimeString([], {

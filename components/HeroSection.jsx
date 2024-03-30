@@ -1,16 +1,19 @@
 import { useContext } from "react";
 import { WeatherData } from "@/context/location";
 import Image from "next/image";
+import { Theme } from "@/context/darkThemeContext";
 
 const HeroSection = () => {
+  const { mode, toggle } = useContext(Theme);
+
   const { data } = useContext(WeatherData);
   const image = data?.current?.condition?.icon;
 
   return (
-    <section className="w-full flex flex-col items-center">
-      <h1 className="text-white font-bold">{data?.location?.name}</h1>
+    <section className={`w-full flex flex-col items-center `}>
+      <h1 className="dark:text-white font-bold">{data?.location?.name}</h1>
 
-      <div className="flex flex-row items-center gap-5  text-white">
+      <div className="flex flex-row items-center gap-5  dark:text-white">
         {image && (
           <div className="flex flex-col items-center ">
             <Image
